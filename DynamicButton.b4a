@@ -1,0 +1,84 @@
+﻿Build1=Default,b4a.example
+File1=Layout.bal
+FileGroup1=Default Group
+Group=Default Group
+Library1=core
+Library2=xui
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="29"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+Module1=cvDynamicButton
+Module2=Starter
+NumberOfFiles=1
+NumberOfLibraries=2
+NumberOfModules=2
+Version=11.2
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Private xui As XUI
+	
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	Private ScrollView1 As ScrollView
+	Private dybtn As cvDynamicButton
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("Layout")
+	dybtn.Initialize(Me, "dybtn_click")
+	dybtn.setActivityHeightWidth(Activity.Height, Activity.Width)
+	dybtn.setNumOfRow(8)
+	' Cast from double to int
+	ScrollView1.Panel.Height = dybtn.BtnHeight * dybtn.NumOfRow
+	ScrollView1.Panel.Width = Activity.Width
+	' pass the scrollview into the custom view
+	dybtn.CreateButtons
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Sub Button1_Click
+	xui.MsgboxAsync("Hello world!", "B4X")
+End Sub
+' Event handler
+Sub dybtn_click(res As String)
+	ToastMessageShow(res, False)
+End Sub
+' Event handler 
+Sub AddButtonHandler(mapRes As Map)
+	Dim btn As Button = mapRes.Get("button")
+	Dim x As Int = mapRes.Get("x")
+	Dim y As Int = mapRes.Get("y")
+	Dim w As Int = mapRes.Get("w")
+	Dim h As Int = mapRes.Get("h")
+	Dim row As Int = mapRes.Get("r")
+	Dim col As Int = mapRes.Get("c")
+	ScrollView1.Panel.AddView(btn, x, y, w, h)
+	Log("Button added: " & $"(${row}, ${col})"$)
+End Sub
+
+Private Sub ScrollView1_ScrollChanged(Position As Int)
+	Log("ScrollView: " & Position)
+End Sub
