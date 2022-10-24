@@ -61,10 +61,10 @@ cvdynamicbutton._m_numofrow = BA.numberCast(int.class, 5);__ref.setField("_m_num
 cvdynamicbutton._m_btnwidth = RemoteObject.createImmutable(0);__ref.setField("_m_btnwidth",cvdynamicbutton._m_btnwidth);
  //BA.debugLineNum = 17;BA.debugLine="Private m_BtnHeight As Int";
 cvdynamicbutton._m_btnheight = RemoteObject.createImmutable(0);__ref.setField("_m_btnheight",cvdynamicbutton._m_btnheight);
- //BA.debugLineNum = 18;BA.debugLine="Private m_ActivityWidth As Int";
-cvdynamicbutton._m_activitywidth = RemoteObject.createImmutable(0);__ref.setField("_m_activitywidth",cvdynamicbutton._m_activitywidth);
- //BA.debugLineNum = 19;BA.debugLine="Private m_ActivityHeight As Int";
-cvdynamicbutton._m_activityheight = RemoteObject.createImmutable(0);__ref.setField("_m_activityheight",cvdynamicbutton._m_activityheight);
+ //BA.debugLineNum = 18;BA.debugLine="Private m_PanelWidth As Int";
+cvdynamicbutton._m_panelwidth = RemoteObject.createImmutable(0);__ref.setField("_m_panelwidth",cvdynamicbutton._m_panelwidth);
+ //BA.debugLineNum = 19;BA.debugLine="Private m_PanelHeight As Int";
+cvdynamicbutton._m_panelheight = RemoteObject.createImmutable(0);__ref.setField("_m_panelheight",cvdynamicbutton._m_panelheight);
  //BA.debugLineNum = 21;BA.debugLine="Type Pos(x As Int,y As Int)";
 ;
  //BA.debugLineNum = 22;BA.debugLine="End Sub";
@@ -260,48 +260,6 @@ catch (Exception e) {
 finally {
 			Debug.PopSubsStack();
 		}}
-public static RemoteObject  _setactivityheightwidth(RemoteObject __ref,RemoteObject _h,RemoteObject _w) throws Exception{
-try {
-		Debug.PushSubsStack("setActivityHeightWidth (cvdynamicbutton) ","cvdynamicbutton",2,__ref.getField(false, "ba"),__ref,59);
-if (RapidSub.canDelegate("setactivityheightwidth")) { return __ref.runUserSub(false, "cvdynamicbutton","setactivityheightwidth", __ref, _h, _w);}
-Debug.locals.put("h", _h);
-Debug.locals.put("w", _w);
- BA.debugLineNum = 59;BA.debugLine="Public Sub setActivityHeightWidth(h As Int, w As I";
-Debug.ShouldStop(67108864);
- BA.debugLineNum = 60;BA.debugLine="m_ActivityHeight = h";
-Debug.ShouldStop(134217728);
-__ref.setField ("_m_activityheight" /*RemoteObject*/ ,_h);
- BA.debugLineNum = 61;BA.debugLine="m_ActivityWidth = w";
-Debug.ShouldStop(268435456);
-__ref.setField ("_m_activitywidth" /*RemoteObject*/ ,_w);
- BA.debugLineNum = 62;BA.debugLine="m_BtnWidth = m_ActivityWidth / m_NumOfCol";
-Debug.ShouldStop(536870912);
-__ref.setField ("_m_btnwidth" /*RemoteObject*/ ,BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_m_activitywidth" /*RemoteObject*/ ),__ref.getField(true,"_m_numofcol" /*RemoteObject*/ )}, "/",0, 0)));
- BA.debugLineNum = 63;BA.debugLine="m_BtnHeight = m_ActivityHeight / 5";
-Debug.ShouldStop(1073741824);
-__ref.setField ("_m_btnheight" /*RemoteObject*/ ,BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_m_activityheight" /*RemoteObject*/ ),RemoteObject.createImmutable(5)}, "/",0, 0)));
- BA.debugLineNum = 64;BA.debugLine="Log(\"Activity's Height: \" & m_ActivityHeight)";
-Debug.ShouldStop(-2147483648);
-cvdynamicbutton.__c.runVoidMethod ("LogImpl","71507333",RemoteObject.concat(RemoteObject.createImmutable("Activity's Height: "),__ref.getField(true,"_m_activityheight" /*RemoteObject*/ )),0);
- BA.debugLineNum = 65;BA.debugLine="Log(\"Activity's Width: \" & m_ActivityWidth)";
-Debug.ShouldStop(1);
-cvdynamicbutton.__c.runVoidMethod ("LogImpl","71507334",RemoteObject.concat(RemoteObject.createImmutable("Activity's Width: "),__ref.getField(true,"_m_activitywidth" /*RemoteObject*/ )),0);
- BA.debugLineNum = 66;BA.debugLine="Log(\"Button's Height: \" & m_BtnHeight)";
-Debug.ShouldStop(2);
-cvdynamicbutton.__c.runVoidMethod ("LogImpl","71507335",RemoteObject.concat(RemoteObject.createImmutable("Button's Height: "),__ref.getField(true,"_m_btnheight" /*RemoteObject*/ )),0);
- BA.debugLineNum = 67;BA.debugLine="Log(\"Button's Width: \" & m_BtnWidth)";
-Debug.ShouldStop(4);
-cvdynamicbutton.__c.runVoidMethod ("LogImpl","71507336",RemoteObject.concat(RemoteObject.createImmutable("Button's Width: "),__ref.getField(true,"_m_btnwidth" /*RemoteObject*/ )),0);
- BA.debugLineNum = 68;BA.debugLine="End Sub";
-Debug.ShouldStop(8);
-return RemoteObject.createImmutable("");
-}
-catch (Exception e) {
-			throw Debug.ErrorCaught(e);
-		} 
-finally {
-			Debug.PopSubsStack();
-		}}
 public static RemoteObject  _setnumofrow(RemoteObject __ref,RemoteObject _val) throws Exception{
 try {
 		Debug.PushSubsStack("setNumOfRow (cvdynamicbutton) ","cvdynamicbutton",2,__ref.getField(false, "ba"),__ref,51);
@@ -314,6 +272,48 @@ Debug.ShouldStop(524288);
 __ref.setField ("_m_numofrow" /*RemoteObject*/ ,_val);
  BA.debugLineNum = 53;BA.debugLine="End Sub";
 Debug.ShouldStop(1048576);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _setpanelheightwidth(RemoteObject __ref,RemoteObject _h,RemoteObject _w) throws Exception{
+try {
+		Debug.PushSubsStack("setPanelHeightWidth (cvdynamicbutton) ","cvdynamicbutton",2,__ref.getField(false, "ba"),__ref,59);
+if (RapidSub.canDelegate("setpanelheightwidth")) { return __ref.runUserSub(false, "cvdynamicbutton","setpanelheightwidth", __ref, _h, _w);}
+Debug.locals.put("h", _h);
+Debug.locals.put("w", _w);
+ BA.debugLineNum = 59;BA.debugLine="Public Sub setPanelHeightWidth(h As Int, w As Int)";
+Debug.ShouldStop(67108864);
+ BA.debugLineNum = 60;BA.debugLine="m_PanelHeight = h";
+Debug.ShouldStop(134217728);
+__ref.setField ("_m_panelheight" /*RemoteObject*/ ,_h);
+ BA.debugLineNum = 61;BA.debugLine="m_PanelWidth = w";
+Debug.ShouldStop(268435456);
+__ref.setField ("_m_panelwidth" /*RemoteObject*/ ,_w);
+ BA.debugLineNum = 62;BA.debugLine="m_BtnWidth = m_PanelWidth / m_NumOfCol";
+Debug.ShouldStop(536870912);
+__ref.setField ("_m_btnwidth" /*RemoteObject*/ ,BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_m_panelwidth" /*RemoteObject*/ ),__ref.getField(true,"_m_numofcol" /*RemoteObject*/ )}, "/",0, 0)));
+ BA.debugLineNum = 63;BA.debugLine="m_BtnHeight = m_PanelHeight / 5";
+Debug.ShouldStop(1073741824);
+__ref.setField ("_m_btnheight" /*RemoteObject*/ ,BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_m_panelheight" /*RemoteObject*/ ),RemoteObject.createImmutable(5)}, "/",0, 0)));
+ BA.debugLineNum = 64;BA.debugLine="Log(\"Panel's Height: \" & m_PanelHeight)";
+Debug.ShouldStop(-2147483648);
+cvdynamicbutton.__c.runVoidMethod ("LogImpl","71507333",RemoteObject.concat(RemoteObject.createImmutable("Panel's Height: "),__ref.getField(true,"_m_panelheight" /*RemoteObject*/ )),0);
+ BA.debugLineNum = 65;BA.debugLine="Log(\"Panel's Width: \" & m_PanelWidth)";
+Debug.ShouldStop(1);
+cvdynamicbutton.__c.runVoidMethod ("LogImpl","71507334",RemoteObject.concat(RemoteObject.createImmutable("Panel's Width: "),__ref.getField(true,"_m_panelwidth" /*RemoteObject*/ )),0);
+ BA.debugLineNum = 66;BA.debugLine="Log(\"Button's Height: \" & m_BtnHeight)";
+Debug.ShouldStop(2);
+cvdynamicbutton.__c.runVoidMethod ("LogImpl","71507335",RemoteObject.concat(RemoteObject.createImmutable("Button's Height: "),__ref.getField(true,"_m_btnheight" /*RemoteObject*/ )),0);
+ BA.debugLineNum = 67;BA.debugLine="Log(\"Button's Width: \" & m_BtnWidth)";
+Debug.ShouldStop(4);
+cvdynamicbutton.__c.runVoidMethod ("LogImpl","71507336",RemoteObject.concat(RemoteObject.createImmutable("Button's Width: "),__ref.getField(true,"_m_btnwidth" /*RemoteObject*/ )),0);
+ BA.debugLineNum = 68;BA.debugLine="End Sub";
+Debug.ShouldStop(8);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

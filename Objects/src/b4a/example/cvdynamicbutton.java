@@ -52,8 +52,8 @@ public int _m_numofcol = 0;
 public int _m_numofrow = 0;
 public int _m_btnwidth = 0;
 public int _m_btnheight = 0;
-public int _m_activitywidth = 0;
-public int _m_activityheight = 0;
+public int _m_panelwidth = 0;
+public int _m_panelheight = 0;
 public b4a.example.main _main = null;
 public b4a.example.starter _starter = null;
 public String  _initialize(b4a.example.cvdynamicbutton __ref,anywheresoftware.b4a.BA _ba,Object _callback,String _eventname) throws Exception{
@@ -74,31 +74,31 @@ RDebugUtils.currentLine=1048580;
  //BA.debugLineNum = 1048580;BA.debugLine="End Sub";
 return "";
 }
-public String  _setactivityheightwidth(b4a.example.cvdynamicbutton __ref,int _h,int _w) throws Exception{
+public String  _setpanelheightwidth(b4a.example.cvdynamicbutton __ref,int _h,int _w) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="cvdynamicbutton";
-if (Debug.shouldDelegate(ba, "setactivityheightwidth", false))
-	 {return ((String) Debug.delegate(ba, "setactivityheightwidth", new Object[] {_h,_w}));}
+if (Debug.shouldDelegate(ba, "setpanelheightwidth", false))
+	 {return ((String) Debug.delegate(ba, "setpanelheightwidth", new Object[] {_h,_w}));}
 RDebugUtils.currentLine=1507328;
- //BA.debugLineNum = 1507328;BA.debugLine="Public Sub setActivityHeightWidth(h As Int, w As I";
+ //BA.debugLineNum = 1507328;BA.debugLine="Public Sub setPanelHeightWidth(h As Int, w As Int)";
 RDebugUtils.currentLine=1507329;
- //BA.debugLineNum = 1507329;BA.debugLine="m_ActivityHeight = h";
-__ref._m_activityheight /*int*/  = _h;
+ //BA.debugLineNum = 1507329;BA.debugLine="m_PanelHeight = h";
+__ref._m_panelheight /*int*/  = _h;
 RDebugUtils.currentLine=1507330;
- //BA.debugLineNum = 1507330;BA.debugLine="m_ActivityWidth = w";
-__ref._m_activitywidth /*int*/  = _w;
+ //BA.debugLineNum = 1507330;BA.debugLine="m_PanelWidth = w";
+__ref._m_panelwidth /*int*/  = _w;
 RDebugUtils.currentLine=1507331;
- //BA.debugLineNum = 1507331;BA.debugLine="m_BtnWidth = m_ActivityWidth / m_NumOfCol";
-__ref._m_btnwidth /*int*/  = (int) (__ref._m_activitywidth /*int*/ /(double)__ref._m_numofcol /*int*/ );
+ //BA.debugLineNum = 1507331;BA.debugLine="m_BtnWidth = m_PanelWidth / m_NumOfCol";
+__ref._m_btnwidth /*int*/  = (int) (__ref._m_panelwidth /*int*/ /(double)__ref._m_numofcol /*int*/ );
 RDebugUtils.currentLine=1507332;
- //BA.debugLineNum = 1507332;BA.debugLine="m_BtnHeight = m_ActivityHeight / 5";
-__ref._m_btnheight /*int*/  = (int) (__ref._m_activityheight /*int*/ /(double)5);
+ //BA.debugLineNum = 1507332;BA.debugLine="m_BtnHeight = m_PanelHeight / 5";
+__ref._m_btnheight /*int*/  = (int) (__ref._m_panelheight /*int*/ /(double)5);
 RDebugUtils.currentLine=1507333;
- //BA.debugLineNum = 1507333;BA.debugLine="Log(\"Activity's Height: \" & m_ActivityHeight)";
-__c.LogImpl("71507333","Activity's Height: "+BA.NumberToString(__ref._m_activityheight /*int*/ ),0);
+ //BA.debugLineNum = 1507333;BA.debugLine="Log(\"Panel's Height: \" & m_PanelHeight)";
+__c.LogImpl("71507333","Panel's Height: "+BA.NumberToString(__ref._m_panelheight /*int*/ ),0);
 RDebugUtils.currentLine=1507334;
- //BA.debugLineNum = 1507334;BA.debugLine="Log(\"Activity's Width: \" & m_ActivityWidth)";
-__c.LogImpl("71507334","Activity's Width: "+BA.NumberToString(__ref._m_activitywidth /*int*/ ),0);
+ //BA.debugLineNum = 1507334;BA.debugLine="Log(\"Panel's Width: \" & m_PanelWidth)";
+__c.LogImpl("71507334","Panel's Width: "+BA.NumberToString(__ref._m_panelwidth /*int*/ ),0);
 RDebugUtils.currentLine=1507335;
  //BA.debugLineNum = 1507335;BA.debugLine="Log(\"Button's Height: \" & m_BtnHeight)";
 __c.LogImpl("71507335","Button's Height: "+BA.NumberToString(__ref._m_btnheight /*int*/ ),0);
@@ -270,11 +270,11 @@ RDebugUtils.currentLine=983048;
  //BA.debugLineNum = 983048;BA.debugLine="Private m_BtnHeight As Int";
 _m_btnheight = 0;
 RDebugUtils.currentLine=983049;
- //BA.debugLineNum = 983049;BA.debugLine="Private m_ActivityWidth As Int";
-_m_activitywidth = 0;
+ //BA.debugLineNum = 983049;BA.debugLine="Private m_PanelWidth As Int";
+_m_panelwidth = 0;
 RDebugUtils.currentLine=983050;
- //BA.debugLineNum = 983050;BA.debugLine="Private m_ActivityHeight As Int";
-_m_activityheight = 0;
+ //BA.debugLineNum = 983050;BA.debugLine="Private m_PanelHeight As Int";
+_m_panelheight = 0;
 RDebugUtils.currentLine=983052;
  //BA.debugLineNum = 983052;BA.debugLine="Type Pos(x As Int,y As Int)";
 ;

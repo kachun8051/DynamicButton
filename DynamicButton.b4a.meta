@@ -7,6 +7,6 @@ ModuleBreakpoints2=
 ModuleClosedNodes0=
 ModuleClosedNodes1=
 ModuleClosedNodes2=1
-NavigationStack=cvDynamicButton,Initialize,26,0,cvDynamicButton,getNumOfRow,50,0,cvDynamicButton,setNumOfRow,52,5,Main,Activity_Create,30,6,cvDynamicButton,ButtonX_Click,94,0,Visual Designer,Layout.bal,-100,2,Main,dybtn_click,54,0,Main,Globals,26,0,cvDynamicButton,Class_Globals,14,0,cvDynamicButton,CreateButtons,70,6,cvDynamicButton,setActivityHeightWidth,66,0
+NavigationStack=cvDynamicButton,ButtonX_Click,94,0,Visual Designer,Layout.bal,-100,2,Main,Globals,26,0,cvDynamicButton,CreateButtons,70,6,cvDynamicButton,Class_Globals,18,0,cvDynamicButton,setPanelHeightWidth,65,2,Main,AddButtonHandler,60,0,Main,Button1_Click,53,0,Main,dybtn_click,55,0,Main,Activity_Create,32,6
 SelectedBuild=0
 VisibleModules=2,1

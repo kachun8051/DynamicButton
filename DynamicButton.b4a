@@ -42,12 +42,15 @@ End Sub
 Sub Activity_Create(FirstTime As Boolean)
 	Activity.LoadLayout("Layout")
 	dybtn.Initialize(Me, "dybtn_click")
-	dybtn.setActivityHeightWidth(Activity.Height, Activity.Width)
+	' Please note that dimension of ScrollView is different from 
+	' dimension of panel of ScrollView
+	Dim svHeight As Double = ScrollView1.Height
+	Dim svWidth As Double = ScrollView1.Width
+	dybtn.setPanelHeightWidth(svHeight, svWidth)
 	dybtn.setNumOfRow(8)
 	' Cast from double to int
 	ScrollView1.Panel.Height = dybtn.BtnHeight * dybtn.NumOfRow
 	ScrollView1.Panel.Width = Activity.Width
-	' pass the scrollview into the custom view
 	dybtn.CreateButtons
 End Sub
 

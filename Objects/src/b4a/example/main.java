@@ -385,6 +385,8 @@ public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
+double _svheight = 0;
+double _svwidth = 0;
 RDebugUtils.currentLine=131072;
  //BA.debugLineNum = 131072;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
 RDebugUtils.currentLine=131073;
@@ -393,23 +395,29 @@ mostCurrent._activity.LoadLayout("Layout",mostCurrent.activityBA);
 RDebugUtils.currentLine=131074;
  //BA.debugLineNum = 131074;BA.debugLine="dybtn.Initialize(Me, \"dybtn_click\")";
 mostCurrent._dybtn._initialize /*String*/ (null,mostCurrent.activityBA,main.getObject(),"dybtn_click");
-RDebugUtils.currentLine=131075;
- //BA.debugLineNum = 131075;BA.debugLine="dybtn.setActivityHeightWidth(Activity.Height, Act";
-mostCurrent._dybtn._setactivityheightwidth /*String*/ (null,mostCurrent._activity.getHeight(),mostCurrent._activity.getWidth());
-RDebugUtils.currentLine=131076;
- //BA.debugLineNum = 131076;BA.debugLine="dybtn.setNumOfRow(8)";
-mostCurrent._dybtn._setnumofrow /*String*/ (null,(int) (8));
+RDebugUtils.currentLine=131077;
+ //BA.debugLineNum = 131077;BA.debugLine="Dim svHeight As Double = ScrollView1.Height";
+_svheight = mostCurrent._scrollview1.getHeight();
 RDebugUtils.currentLine=131078;
- //BA.debugLineNum = 131078;BA.debugLine="ScrollView1.Panel.Height = dybtn.BtnHeight * dybt";
-mostCurrent._scrollview1.getPanel().setHeight((int) (mostCurrent._dybtn._getbtnheight /*int*/ (null)*mostCurrent._dybtn._getnumofrow /*int*/ (null)));
+ //BA.debugLineNum = 131078;BA.debugLine="Dim svWidth As Double = ScrollView1.Width";
+_svwidth = mostCurrent._scrollview1.getWidth();
 RDebugUtils.currentLine=131079;
- //BA.debugLineNum = 131079;BA.debugLine="ScrollView1.Panel.Width = Activity.Width";
-mostCurrent._scrollview1.getPanel().setWidth(mostCurrent._activity.getWidth());
-RDebugUtils.currentLine=131081;
- //BA.debugLineNum = 131081;BA.debugLine="dybtn.CreateButtons";
-mostCurrent._dybtn._createbuttons /*String*/ (null);
+ //BA.debugLineNum = 131079;BA.debugLine="dybtn.setPanelHeightWidth(svHeight, svWidth)";
+mostCurrent._dybtn._setpanelheightwidth /*String*/ (null,(int) (_svheight),(int) (_svwidth));
+RDebugUtils.currentLine=131080;
+ //BA.debugLineNum = 131080;BA.debugLine="dybtn.setNumOfRow(8)";
+mostCurrent._dybtn._setnumofrow /*String*/ (null,(int) (8));
 RDebugUtils.currentLine=131082;
- //BA.debugLineNum = 131082;BA.debugLine="End Sub";
+ //BA.debugLineNum = 131082;BA.debugLine="ScrollView1.Panel.Height = dybtn.BtnHeight * dybt";
+mostCurrent._scrollview1.getPanel().setHeight((int) (mostCurrent._dybtn._getbtnheight /*int*/ (null)*mostCurrent._dybtn._getnumofrow /*int*/ (null)));
+RDebugUtils.currentLine=131083;
+ //BA.debugLineNum = 131083;BA.debugLine="ScrollView1.Panel.Width = Activity.Width";
+mostCurrent._scrollview1.getPanel().setWidth(mostCurrent._activity.getWidth());
+RDebugUtils.currentLine=131084;
+ //BA.debugLineNum = 131084;BA.debugLine="dybtn.CreateButtons";
+mostCurrent._dybtn._createbuttons /*String*/ (null);
+RDebugUtils.currentLine=131085;
+ //BA.debugLineNum = 131085;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{

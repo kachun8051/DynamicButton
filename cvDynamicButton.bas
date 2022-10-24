@@ -21,8 +21,8 @@ Sub Class_Globals
 	Private m_NumOfRow As Int = 5
 	Private m_BtnWidth As Int
 	Private m_BtnHeight As Int
-	Private m_ActivityWidth As Int
-	Private m_ActivityHeight As Int
+	Private m_PanelWidth As Int
+	Private m_PanelHeight As Int
 	' Private mScrollView As ScrollView
 	Type Pos(x As Int,y As Int)
 End Sub
@@ -62,13 +62,13 @@ Public Sub getBtnHeight() As Int
 	Return m_BtnHeight
 End Sub
 
-Public Sub setActivityHeightWidth(h As Int, w As Int)
-	m_ActivityHeight = h
-	m_ActivityWidth = w 
-	m_BtnWidth = m_ActivityWidth / m_NumOfCol
-	m_BtnHeight = m_ActivityHeight / 5
-	Log("Activity's Height: " & m_ActivityHeight)
-	Log("Activity's Width: " & m_ActivityWidth)	
+Public Sub setPanelHeightWidth(h As Int, w As Int)
+	m_PanelHeight = h
+	m_PanelWidth = w 
+	m_BtnWidth = m_PanelWidth / m_NumOfCol
+	m_BtnHeight = m_PanelHeight / 5
+	Log("Panel's Height: " & m_PanelHeight)
+	Log("Panel's Width: " & m_PanelWidth)	
 	Log("Button's Height: " & m_BtnHeight)
 	Log("Button's Width: " & m_BtnWidth)
 End Sub
